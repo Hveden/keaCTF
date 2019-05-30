@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  webinterface:
+    image: php:7.2-apache
+    volumes:
+      - ./webinterface:/var/www/html
+    restart: always
+    ports:
+      - "8888:80"
+  
+  webchallenges:
+    image: php:7.2-apache
+    volumes:
+      - ./webchallenges:/var/www/html
+    restart: always
+    ports:
+      - "8080:80"

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Secret Project</title>
+</head>
+<body>
+	<script language="javascript">
+
+	function passusr() {
+	var user = document.getElementById("user").value;
+	var pass = document.getElementById("password").value;
+	if (user=="kea") { 
+	if (pass=="IT-teknologi") {              
+	location="secret/admin.html" 
+	} else {
+	alert("Invalid Password")
+	}
+	} else {  alert("Invalid username")
+	}
+	}
+	<!--Husk at obfuskere denne funktion før siden går i produktionn -->
+	</script>
+
+
+
+    <h1><b>username</b><input name='id' id='user'></h1> 
+    <h1><b>password</b><input name='pass' id='password'></h1>
+    <input type="button" value="login" onclick="passusr()"">
+</body>
+</html>

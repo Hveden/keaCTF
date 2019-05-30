@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  	<title>Kea CTF</title>
+    <style>
+    #more {display: none;}
+    #more1 {display: none;}
+    #more2 {display: none;}
+    #more3 {display: none;}
+    #more4 {display: none;}
+    #more5 {display: none;}
+    #more6 {display: none;}
+    #more7 {display: none;}
+    #more8 {display: none;}
+    </style>
+  </head>
+   <body>
+    <div>
+      <img src="kea.png" alt="Kea"> 
+      <h1>Velkomen til keaCTF </h1>
+      <p>Alle flag er på formatet kea{something_something}</p>
+      <p>Lad vær med at angribe infrastrukturen og lad være at bruge automatiske scannere da hardwaren ikke kan holde til det</p>
+    </div>
+    <h3>Misc. Opgaver</h3>
+   	<div>
+   	<p> 1. Min PDF er gået i stykker, måske noget magi kan rede <a href="/magic">den</a>.  <span id="dots">...</span><span id="more"> --- Hvordan ved en computer hvilken filtype en bestemt fil har? <a href="https://en.wikipedia.org/wiki/List_of_file_signatures">  Wikipediea  </a></span><button onclick="myFunction('dots', 'more', 'myBtn')" id="myBtn">Hint - læs mere</button></p>
+      
+   	</div>
+    <div>
+   	<p> 2. Vi har opfanget noget data men kan ikke læse <a href="/garble">det</a> men måske kan du finde noget <span id="dots1">...</span><span id="more1" > --- Der er indbyggede redskaber i linux til at finde ascii tekst("strings") og filtre("grep") </span><button onclick="myFunction('dots1', 'more1', 'myBtn1')" id="myBtn1">Hint - læs mere</button></p>
+   	</div>
+    <div><h3>Web Opgaver</h3></div>
+ 
+   	<p> 1. Vi har lavet en ny login form og vil gerne have hjælp til at sikkerhedsteste <a href="http://192.168.1.4:8080/hej.html">den</a>. Kan du logge ind på den? <span id="dots2">...</span><span id="more2"> --- Det ser ud til at hjemmesiden bruger javascript til authentication </span><button onclick="myFunction('dots2', 'more2', 'myBtn2')" id="myBtn2">Hint - læs mere</button></p>
+    <p> 2. Er du hurtig nok til at læse beskeden på <a href="http://192.168.1.4:8080/redirect.html">denne</a> Hjemmeside<span id="dots5">...</span><span id="more5"> --- Prøv hjemmesiden med Wireshark kørende! </span><button onclick="myFunction('dots5', 'more5', 'myBtn5')" id="myBtn5">Hint - læs mere</button></p>
+   	<div></div>
+   	<a> 3. En bruger har lavet søgninger på en usikker <a href="/search">side</a> kan du finde ud af hvad de har søgt efter <span id="dots3">...</span><span id="more3"> --- Hvilken web protocol kendt som en usikker protokol </span><button onclick="myFunction('dots3', 'more3', 'myBtn3')" id="myBtn3">Hint - læs mere</button></a>
+       <p>4. Der er også et hemmeligt flag på webserveren på port 8080.r<span id="dots7">...</span><span id="more7"> --- Er det muligt at læse andre filer på en webserver </span><button onclick="myFunction('dots7', 'more7', 'myBtn7')" id="myBtn7">Hint - læs mere</button></p>
+    <div><h3>Cryptografi Opgaver</h3></div>
+    <p> 1. Følgende besked er blevet opsnappet <strong>ea70056c312f7629c8c1c1e4b776d4e7</strong> kan du finde ud af hvad den betyder<span id="dots4">...</span><span id="more4"> --- Er en af de mest populære hashing algoritmer </span><button onclick="myFunction('dots4', 'more4', 'myBtn4')" id="myBtn4">Hint - læs mere</button></p>
+    <p> 2. Endnu en besked er blevet opsnappet <strong>qkg{jkt_uxomotgrk_qujk}</strong> kan du finde ud af hvad den betyder<span id="dots6">...</span><span id="more6"> --- En af de originale Ciphers, prøv at drej på bogstaverne </span><button onclick="myFunction('dots6', 'more6', 'myBtn6')" id="myBtn6">Hint - læs mere</button></p>
+    <p> 3. Og så lige en sidste en <strong>000000101d0e193a0a0a0b3e1da6c719003e0e03070e0e1502131516</strong> vi har også fundet et password: kea <strong>kea</strong><span id="dots8">...</span><span id="more8"> --- Forskellen på kea og kea er 000000 </span><button onclick="myFunction('dots8', 'more8', 'myBtn8')" id="myBtn8">Hint - læs mere</button></p>
+
+
+
+
+  <script>
+function myFunction(dot, more, btn) {
+  var dots = document.getElementById(dot);
+  var moreText = document.getElementById(more);
+  var btnText = document.getElementById(btn);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Hint - læs mere"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Hint - læs mindre"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+	</body>
+
+</html>
+
+	
